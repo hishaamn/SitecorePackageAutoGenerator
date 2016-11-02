@@ -1,0 +1,9 @@
+C:\Users\mnamooya\Documents\Visual Studio 2013\Projects\Sitecore.Package.AutoGenerator\Sitecore.Package.AutoGenerator\bin\Debug\Sitecore.Package.AutoGenerator.dll
+C:\Users\mnamooya\Documents\Visual Studio 2013\Projects\Sitecore.Package.AutoGenerator\Sitecore.Package.AutoGenerator\bin\Debug\Sitecore.Package.AutoGenerator.pdb
+C:\Users\mnamooya\Documents\Visual Studio 2013\Projects\Sitecore.Package.AutoGenerator\Sitecore.Package.AutoGenerator\bin\Debug\Sitecore.Client.dll
+C:\Users\mnamooya\Documents\Visual Studio 2013\Projects\Sitecore.Package.AutoGenerator\Sitecore.Package.AutoGenerator\bin\Debug\Sitecore.Kernel.dll
+C:\Users\mnamooya\Documents\Visual Studio 2013\Projects\Sitecore.Package.AutoGenerator\Sitecore.Package.AutoGenerator\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mnamooya\Documents\Visual Studio 2013\Projects\Sitecore.Package.AutoGenerator\Sitecore.Package.AutoGenerator\bin\Debug\Sitecore.Zip.dll
+C:\Users\mnamooya\Documents\Visual Studio 2013\Projects\Sitecore.Package.AutoGenerator\Sitecore.Package.AutoGenerator\obj\Debug\Sitecore.Package.AutoGenerator.dll
+C:\Users\mnamooya\Documents\Visual Studio 2013\Projects\Sitecore.Package.AutoGenerator\Sitecore.Package.AutoGenerator\obj\Debug\Sitecore.Package.AutoGenerator.pdb
+C:\Users\mnamooya\Documents\Visual Studio 2013\Projects\Sitecore.Package.AutoGenerator\Sitecore.Package.AutoGenerator\obj\Debug\Sitecore.Package.AutoGenerator.csprojResolveAssemblyReference.cache

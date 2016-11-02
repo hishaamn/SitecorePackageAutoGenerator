@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <UploadFile>
+    <WizardForm CodeBeside="Sitecore.Package.AutoGenerator.Core.UI.UploadForm,Sitecore.Package.AutoGenerator" FormTarget="sitecoreupload" Enctype="multipart/form-data" GridPanel.Height="100%">
+      <DataContext ID="UploadDataContext" DataViewName="Master" Root="{3D6658D8-A0BF-4E75-B3E2-D050FABCF4E1}" Filter="Contains('{FE5DD826-48C6-436D-B87A-7C4210C7413B}', @@templateid)"/>
+
+      <WizardFormFirstPage ID="FirstPage" Icon="Applications/32x32/Export1.png">
+        <Border Class="scWizardWelcomeTitle">
+          <Literal Text="Welcome to the Upload wizard."/>
+        </Border>
+        <Literal Text="This wizard helps you:"/>
+        <ul>
+          <li class="scWizardBullet">
+            <Literal Text="Select a number of files to upload."/>
+          </li>
+          <li class="scWizardBullet">
+            <Literal Text="Upload the selected files to the server."/>
+          </li>
+        </ul>
+      </WizardFormFirstPage>
+
+      <WizardFormPage ID="Files" Header="Select Files" Text="Select the files to upload. Click Next when done." Icon="Applications/32x32/Export1.png">
+        <WizardFormIndent>
+          <input id="Item" name="Item" type="hidden" value=""/>
+          <input id="Language" name="Language" type="hidden" value=""/>
+          <input id="Path" name="Path" type="hidden" value=""/>
+          <input id="Unzip" name="Unzip" type="hidden" value="0"/>
+          <input id="Overwrite" name="Overwrite" type="hidden" value="0"/>
+
+          <Scrollbox ID="FileList" class="scScrollbox scStretch" Border="none" style="background: inherit; " />
+
+        </WizardFormIndent>
+      </WizardFormPage>
+
+      <WizardFormPage ID="Settings" Header="Settings" Text="Please select settings for uploading the files. When ready, click Next to upload the files." Icon="Applications/32x32/Export1.png">
+        <WizardFormIndent>
+          <GridPanel Columns="2" CellPadding="4">
+
+            <Literal Text="Overwrite existing files:"/>
+            <Checkbox ID="OverwriteCheck" Change="upload:overwriteclicked"/>
+
+          </GridPanel>
+        </WizardFormIndent>
+      </WizardFormPage>
+
+      <WizardFormPage ID="Uploading" Header="Uploading" Text="Please wait while the file(s) are being uploaded..." Icon="Applications/32x32/Export1.png">
+        <GridPanel Width="100%">
+          <Border Height="64"/>
+
+          <ThemedImage Src="Applications/48x48/Export1.png" Width="48" Height="48" GridPanel.Align="center"/>
+
+          <Space Height="16"/>
+
+          <Border Align="center">
+            <ThemedImage Src="Images/progress.gif" Width="94" Height="17"/>
+          </Border>
+
+          <Space Height="16"/>
+
+          <Border Align="center" GridPanel.Align="center" GridPanel.Style="font-weight:bold">
+            <Literal Text="Uploading..."/>
+          </Border>
+        </GridPanel>
+      </WizardFormPage>
+
+      <WizardFormLastPage ID="LastPage" Icon="Applications/32x32/Export1.png">
+        <Literal Text="The wizard has completed. Click the Finish button to close the Wizard."/>
+      </WizardFormLastPage>
+
+    </WizardForm>
+  </UploadFile>
+</control>

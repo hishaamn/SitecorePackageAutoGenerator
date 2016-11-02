@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <PackageGenerator>
+    <Script Src="/sitecore/shell/Applications/Install/installer.js" />
+    <WizardForm CodeBeside="Sitecore.Package.AutoGenerator.Core.UI.PackageGenerationForm,Sitecore.Package.AutoGenerator">
+
+      <WizardFormFirstPage ID="FirstPage" Icon="People/32x32/Box_Software.png">
+        <Border Class="scWizardWelcomeTitle">
+          <Literal ID="Welcome" Text="Welcome to the Package Generation Wizard."/>
+        </Border>
+        <Literal Text="This wizard helps you:"/>
+        <ul>
+          <li class="scWizardBullet">
+            <Literal Text="Generate a package from a CSV file."/>
+          </li>
+        </ul>
+      </WizardFormFirstPage>
+
+      <WizardFormPage ID="LoadInformation" Header="Package Information" Text="Upload a CSV file to generate package." Icon="People/32x32/Box_Software.png">
+        <WizardFormIndent>
+          <Border>
+            <Border Padding="0 0 2 0">
+              <Literal Text="Upload CSV File:"/>
+              <br/>
+              <Literal ID="ErrorPackageRequired" Text="CSV file required" Style="color:red"/>
+            </Border>
+            <Border Padding="0 0 16 0">
+              <Edit ID="PackageFile" Width="75%"/>
+              <Button ID="Upload" Header="Upload" Click="pgenerator:upload"/>
+            </Border>
+            <Space height="10%"/>
+            <Border Padding="0 0 2 0">
+              <Literal Text="Package name:" GridPanel.NoWrap="true"/>
+              <br/>
+              <Literal ID="ErrorPackageName" Text="Provide package name" Style="color:red"/>
+            </Border>
+            <Border>
+              <Edit ID="PackageName" ReadOnly="false" Width="75%"/>
+            </Border>
+            <Space height="10%"/>
+            <Border Padding="0 0 2 0">
+              <Literal Text="Version:" GridPanel.NoWrap="true"/>
+            </Border>
+            <Border>
+              <Edit ID="Version" ReadOnly="false" Width="75%"/>
+            </Border>
+            <Space height="10%"/>
+            <Border Padding="0 0 2 0">
+              <Literal Text="Author:" GridPanel.NoWrap="true"/>
+            </Border>
+            <Border>
+              <Edit ID="Author" ReadOnly="false" Width="75%"/>
+            </Border>
+            <Space height="10%"/>
+            <Border Padding="0 0 2 0">
+              <Literal Text="Publisher:" GridPanel.NoWrap="true"/>
+            </Border>
+            <Border>
+              <Edit ID="Publisher" ReadOnly="false" Width="75%"/>
+            </Border>
+          </Border>
+        </WizardFormIndent>
+      </WizardFormPage>
+
+      <WizardFormPage ID="Generator" Header="Generate" Text="This may take a few minutes." Icon="People/32x32/Box_Software.png">
+        <GridPanel Width="100%">
+          <Border Height="64"/>
+
+          <ThemedImage Src="People/48x48/Box_Software.png" Width="48" Height="48" GridPanel.Align="center"/>
+
+          <Space Height="16"/>
+
+          <Border Align="center">
+            <ThemedImage Src="Images/progress.gif" Width="94" Height="17"/>
+          </Border>
+
+          <Space Height="16"/>
+
+          <Border ID="PublishingText" Align="center" GridPanel.Align="center" GridPanel.Style="font-weight:bold">
+            <Literal Text="Generating..."/>
+          </Border>
+
+        </GridPanel>
+      </WizardFormPage>
+
+      <WizardFormLastPage ID="LastPage" Icon="People/32x32/Box_Software.png">
+        <Border ID="SuccessMessage">
+          <Literal Text="The package has been built successfully."/>
+          <br />
+          <br />
+          <Literal Text="Click Finish to close the wizard."/>
+          <Border Padding="64 0 0 0">
+            <Literal Text="Click this button to download the package:"/>
+            <Toolbutton Icon="Network/16x16/download.png" Tooltip="Download the package" Click="buildpackage:download"/>
+          </Border>
+        </Border>
+        
+        <Border ID="ErrorMessage" Padding="0 0 0 20px" Style="display:none;">
+          <Literal Text="The package generation has failed." />
+        </Border>
+      </WizardFormLastPage>
+
+    </WizardForm>
+  </PackageGenerator>
+</control>
