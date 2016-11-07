@@ -6,9 +6,10 @@ All you need is to create a CSV file and have only 3 columns.
 - Column 1
 Item or file path.
 
-Example
+    Example
 
 Item Path: /sitecore/content/New Sample Item
+
 File Path: /layouts/Sample Datasource Sublayout.ascx
 
 - Column 2
